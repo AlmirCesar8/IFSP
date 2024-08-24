@@ -1,0 +1,5 @@
+p = float(input('Digite o valor da prestação: '))
+T = float(input('Digite o valor da taxa de juros: '))
+t = float(input('Digite o tempo em ataso (em meses): '))
+P = (p + (p * (T / 100) * t))
+print('O valor da prestação atrasada é de: R$', P)

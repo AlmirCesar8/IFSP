@@ -1,0 +1,5 @@
+p1 = float(input('Digite a nota da primeira avaliação: '))
+p2 = float(input('Digite a nota da segunda avaliação: '))
+atv = float(input('Digite a nota das atividades: '))
+m = ((p1 * 4 + p2 * 4 + atv * 2)/ 10)
+print('Sua média no semestre foi: {:.2f}'.format(m))

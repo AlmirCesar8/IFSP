@@ -1,0 +1,6 @@
+a = float(input('Digite um número A: '))
+b = float(input('Digite um número B: '))
+c = ((a * b)/ a)
+d = ((b * a)/ b)
+print('O valor de A é:', c)
+print('O valor de B é:', d)
