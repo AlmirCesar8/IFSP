@@ -30,7 +30,7 @@ while x != "N" and x != "n":
         f2 += 1
     elif 15 <= n < 100:
         f3 += 1
-    elif 100 <= n < 100:
+    elif 100 <= n < 1000:
         f4 += 1
     else:
         f5 += 1

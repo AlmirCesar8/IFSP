@@ -27,7 +27,7 @@ int main()
         printf("\n%s%.2f\n4%%\n%.2f", nome, salario, salario + salario * 0.04);
     }
     else if (salario > 2500){
-    	printf("%s %.2f Sem aumento", nome, salario);
+    	printf("\n%s%.2f\nSem aumento", nome, salario);
 	}
 	else{
 		printf("Salario invalido");
