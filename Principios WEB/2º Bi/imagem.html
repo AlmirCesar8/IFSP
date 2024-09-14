@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens no CSS</title>
+
+    <style>
+        body {
+            background-color: #fae6cc;
+        }
+        header {
+            background-color: rgb(207, 189, 156);
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        p {
+            font-size: 19px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        img {
+            height: 25%;
+            width: 25%;
+            margin: 10px;
+        }
+
+        #circulo1 {
+            border-radius: 35%;
+        }
+
+        /* Imagem circulada*/
+        #circulo2 {
+            border-radius: 90%;
+        }
+
+        #circulo3 {
+            border-radius: 800px;
+            /* Imagem arredontada*/
+        }
+
+        #miniatura1 {
+            border: 4px double #ddd;
+            border-radius: 4px;
+            padding: 2px;
+            width: 23%;
+        }
+
+        #miniatura1:hover {
+            box-shadow: 0 0 2px 3px rgba(0, 140, 186, 0.5);
+        }
+
+
+        #miniatura2 {
+            border: 10px solid #eefd;
+        }
+
+        #miniatura3 {
+            border: 15px outset #3246;
+            border-radius: 10%;
+            width: 13%;
+        }
+
+        #resp1 {
+            max-width: 100%;
+            min-width: 15%;
+            height: auto;
+        }
+
+        #center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.polaroid {
+            width: 30%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 4px;
+            float: left;
+            margin: 10px;
+        }
+
+        div.container {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        img.p1 {
+            width: 100%;
+        }
+
+        #opacy1 {
+            opacity: 0.5;
+        }
+
+        #opacy2 {
+            opacity: 0.3;
+        }
+
+        #opacy3 {
+            opacity: 0.8;
+        }
+
+        .container1 {
+            position: relative;
+            float: left;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+        }
+
+        .bottomright {
+            position: absolute;
+            bottom: 14px;
+            right: 16px;
+            font-size: 18px;
+        }
+
+        .topleft {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 18px;
+        }
+
+        .img1 {
+            width: 500px;
+            height: auto;
+            opacity: 0.7;
+        }
+
+        .limpeza {
+            clear: left;
+        }
+
+        .blur {
+            filter: blur(4px);
+        }
+
+        .brightness {
+            filter: brightness(250%);
+        }
+
+        .contrast {
+            filter: contrast(180%);
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .huerotate {
+            filter: hue-rotate(180deg);
+        }
+
+        .invert {
+            filter: invert(100%);
+        }
+
+        .opacity {
+            filter: opacity(50%);
+        }
+
+        .saturate {
+            filter: saturate(7);
+        }
+
+        .sepia {
+            filter: sepia(100%);
+        }
+
+        .shadow {
+            filter: drop-shadow(8px 8px 10px green);
+        }
+
+        #flip:hover {
+            transform: scaleX(-1);
+        }
+
+        .container {
+            position: relative;
+            width: 30%;
+        }
+
+        .image {
+            display: block;
+            width: 600px;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Imagens CSS</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Rounded Images</h2>
+            <p>Use a border-radius-propriedade para criar imagens arredondadas:</p>
+            <img src="Imagens/imagem1.webp" id="circulo1">
+            <img src="Imagens/imagem1.webp" id="circulo2">
+            <img src="Imagens/imagem1.webp" id="circulo3">
+        </div>
+        <div>
+            <h2>Thumbnail Images</h2>
+            <p>Use a border-propriedade para criar imagens em miniatura.</p>
+            <img src="Imagens/imagem2.webp" id="miniatura1">
+            <img src="Imagens/imagem2.webp" id="miniatura2">
+            <img src="Imagens/imagem2.webp" id="miniatura3">
+        </div>
+        <div>
+            <h2>Responsive Images</h2>
+            <p>As imagens responsivas se ajustarão automaticamente ao tamanho da tela.</p>
+            <img src="Imagens/imagem3.jpg" id="resp1">
+        </div>
+        <div>
+            <h2>Center an Image</h2>
+            <p>Para centralizar uma imagem, defina as margens esquerda e direita autoe transforme-a em um
+                block-elemento:</p>
+            <img src="Imagens/imagem4.avif" id="center">
+        </div>
+        <div>
+            <h2>Polaroid Images / Cards</h2>
+            <p>O código gera um conjunto de cards com imagens, com um design inspirado em fotos polaroid, oferecendo uma
+                interface visualmente atraente.</p>
+            <p></p>
+            <div class="polaroid">
+                <img src="Imagens/imagem5.png" class="p1">
+                <div class="container">Clique aqui</div>
+            </div>
+            <div class="polaroid">
+                <img src="Imagens/imagem5.png" class="p1">
+                <div class="container">Clique aqui</div>
+            </div>
+            <div class="polaroid">
+                <img src="Imagens/imagem5.png" class="p1">
+                <div class="container">Clique aqui</div>
+            </div>
+        </div>
+        <div>
+            <h2>Transparent Image</h2>
+            <p>A opacity-propriedade pode ter um valor de 0,0 a 1,0. Quanto menor o valor, mais transparente:</p>
+            <img src="Imagens/imagem6.jpg" id="opacy1">
+            <img src="Imagens/imagem6.jpg" id="opacy2">
+            <img src="Imagens/imagem6.jpg" id="opacy3">
+        </div>
+        <div>
+            <h2>Image Text</h2>
+            <p>Posiona o texto, sobreposto na imagem, na posição desejada</p>
+            <div class="container1">
+                <img src="Imagens/imagem7.webp" class="img1">
+                <div class="center">Centro</div>
+            </div>
+            <div class="container1">
+                <img src="Imagens/imagem7.webp" class="img1">
+                <div class="bottomright">Inferior direita</div>
+            </div>
+            <div class="container1">
+                <img src="Imagens/imagem7.webp" class="img1">
+                <div class="topleft">Superior esquerda</div>
+            </div>
+        </div>
+        <div class="limpeza"></div>
+        <div>
+            <h2>Image Filters</h2>
+            <p>A propriedade de filtro CSS adiciona efeitos visuais (como desfoque e saturação) a um elemento.</p>
+            <img src="Imagens/imagem8.jpg" class="">
+            <img src="Imagens/imagem8.jpg" class="blur">
+            <img src="Imagens/imagem8.jpg" class="brightness">
+            <img src="Imagens/imagem8.jpg" class="contrast">
+            <img src="Imagens/imagem8.jpg" class="grayscale">
+            <img src="Imagens/imagem8.jpg" class="huerotate">
+            <img src="Imagens/imagem8.jpg" class="invert">
+            <img src="Imagens/imagem8.jpg" class="opacity">
+            <img src="Imagens/imagem8.jpg" class="saturate">
+            <img src="Imagens/imagem8.jpg" class="sepia">
+            <img src="Imagens/imagem8.jpg" class="shadow">
+        </div>
+        <div>
+            <h2>Image Hover Overlay</h2>
+            <p>Crie um efeito de sobreposição ao passar o mouse:</p>
+            <div class="container">
+                <img src="Imagens/imagem10.jpg" class="image">
+                <div class="overlay">
+                    <div class="text">Rio de Janeiro</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="Imagens/imagem10.jpg" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Ryo of Januery</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Flip an Image</h2>
+            <p>Ao passar o mouse sobre a imagem, ela é espelhada.</p>
+            <img src="Imagens/imagem11.jpeg" id="flip">
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <title>Notícias</title>
+    <style>
+        header {
+            height: 70px;
+            width: 100%;
+            background-color: rgb(64, 39, 147);
+            margin: 10px 0px;
+            color: aliceblue;
+            text-align: center;
+            padding-bottom: 6px;
+            padding-top: 3px;
+
+        }
+
+        nav {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(108, 65, 225);
+            font-size: 20px;
+        }
+
+        ul {
+            list-style: none;
+            float: left;
+            display: flex;
+            flex: 2;
+        }
+
+        ul li {
+            float: left;
+            text-align: center;
+            flex: 1;
+        }
+
+        ul a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            background-color: rgb(108, 65, 225);
+            color: aliceblue;
+            text-align: center;
+        }
+
+        ul a:hover {
+            transition: 0.3s;
+            background-color: rgb(235, 232, 233);
+            color: black;
+        }
+
+        main {
+            display: flex;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        main div {
+            margin-bottom: 20px;
+            margin: 15px;
+            width: 590px;
+            height: 450px;
+            padding: 15px;
+            box-sizing: border-box;
+            display: flex;
+            background-color: rgb(76, 7, 160);
+            color: aliceblue;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: justify;
+            position: relative;
+        }
+
+        #texto23 {
+            padding: 90px 10px 30px 10px;
+        }
+
+        #texto1 {
+            padding: 65px 10px 30px 10px;
+        }
+
+        main div h3 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            left: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(110, 41, 229);
+            color: aliceblue;
+            width: 100%;
+        }
+
+        .imagem1 {
+            background-image: url(Imagens/Estimativa-Pop_HOME_Wilson-Dias-Agncia-Brasil.jpg);
+        }
+
+        .imagem2 {
+            background-image: url(Imagens/thumbnail-image001-1-.avif);
+        }
+
+        .imagem3 {
+            background-image: url(Imagens/2024-08-29t034553z-1165657252-rc2fp9a94hzv-rtrmadp-3-asia-weather-japan.avif);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Portal das Notícias</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="http://#">Home</a></li>
+            <li><a href="http://">Sobre</a></li>
+            <li><a href="http://">Notícias</a></li>
+            <li><a href="http://">Contatos</a></li>
+            <li><a href="http://">Empresas</a></li>
+        </ul>
+        <form>
+            <input type="search" name="q" placeholder="Pesquisar" />
+            <input type="submit" value="Ir" />
+        </form>
+    </nav>
+    <main>
+        <div class="imagem1" id="texto1">
+            <h3>Brasil tem 212,5 milhões de habitantes, diz IBGE </h3>
+            O Brasil tem 212.583.750 de habitantes, segundo o Instituto Brasileiro de Geografia e Estatística
+            (IBGE). A informação foi divulgada no Diário Oficial da União nesta quinta-feira (29).
+
+            A nova estimativa do IBGE representa um aumento populacional de 4,68% em relação a última atualização do
+            instituto, em dezembro de 2023, que estimava 203.080.756 de pessoas.
+
+            O estado de São Paulo continua com o maior número de habitantes: 45.973.194. Os dados são referentes ao
+            total de pessoas em todas unidades federativas até o dia 1° de julho de 2024.
+        </div>
+        <div id="texto23" class="imagem2">
+            <h3>Defesa Civil de SP alerta para risco de incêndios em quase todo estado nos próximos dias</h3>
+            A Defesa Civil do Estado emitiu um alerta nesta quinta-feira (28) para o risco elevado de incêndios em
+            quase todo o estado de São Paulo. As temperaturas voltam a subir gradativamente entre esta sexta-feira
+            (29) e domingo (31).
+
+            Entre os dias 22 e 24 de agosto, o estado registrou 2,6 mil focos de calor, sendo que 81,29% estavam
+            concentrados em áreas de uso agropecuário, como plantações de cana-de-açúcar e pastagens.
+
+            Além das questões climáticas, desde sábado (24), denúncias anônimas levam a polícia a suspeitos de
+            participação na série de incêndios que foram registrados no interior de São Paulo nos últimos dias. Até
+            esta quinta (29), sete pessoas tinham sido presas.
+        </div>
+        <div class="imagem3" id="texto23">
+            <h3>Tufão de força extrema toca o solo no Japão; 3 morrem e milhões deixam casas</h3>
+            Um tufão de força extrema para o qual o Japão já vem se preparado há duas semanas tocou o solo no país
+            nesta quinta-feira (29, noite de quarta pelo horário de Brasília). Batizado de Shanshan, o fenômeno
+            entrou no Japão pela ilha de Kyushu, no sul, e deixou três mortos, segundo autoridades locais.
+
+            Milhões de pessoas tiveram de deixar suas casas por conta da passagem do tufão, que, nesta manhã,
+            avançava em direção à província de Kagoshima, na ponta sul do Japão, segundo o departamento
+            meteorológico japonês.
+
+            Na véspera, o porta-voz do governo japonês, Yoshimasa Hayashi, havia alertado que o Shanshan,
+            "extremamente forte", traria "ventos violentos, ondas altas e uma tempestade em níveis nunca vistos por
+            muitas pessoas".
+        </div>
+    </main>
+    <footer>
+        &#169 Copyright 2024 IFSP. All rights reversed.
+    </footer>
+</body>
+
+</html>

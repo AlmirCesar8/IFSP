@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font: 18px;
+    color: #777;
+    height: 100%;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.conteudo {
+    color: #111;
+    background-color: white;
+    text-align: justify;
+    padding: 30px ;
+    height: 200px;
+}
+.conteudo3 {
+    height: 150px;
+    color: #111;
+    background-color: white;
+    text-align: justify;
+    padding: 30px ;
+}
+.conteudo-titulo {
+    position: absolute;
+    left: 65%;
+    top: 65%;
+    color: #fff;
+    background-color: #111;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+
+.caixa1,.caixa2,.caixa3 {
+    border: 2px solid black;
+    height: 100%;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.caixa1 {
+    background-image: url(Imagens/familia.jpg);
+}
+
+.caixa2 {
+    background-image: url(Imagens/timao.webp);
+}
+
+.caixa3 {
+    background-image: url(Imagens/livros.webp);
+}
