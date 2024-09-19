@@ -1,0 +1,5 @@
+cores = ('vermelho', 'azul', 'verde', 'amarelo', 'preto')
+print(cores.index('verde'))
+print(cores.count('azul'))
+cores2 = cores + ('branco', 'cinza')
+print(cores2)
