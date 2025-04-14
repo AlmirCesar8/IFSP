@@ -13,27 +13,31 @@
         <div>Blog de Química</div>
         <nav>
             <ul>
-                <li onclick="window.location.href='home.html';">Home</li>
-                <li onclick="window.location.href='sao-paulo.html';">São Paulo</li>
-                <li onclick="window.location.href='osasco.html';">Osasco</li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sao-paulo.html">São Paulo</a></li>
+                <li><a href="osasco.html">Osasco</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="conteiner" onclick="window.location.href='sao-paulo.html';">
-            <div class="img" style="background-image: url('saopaulo.webp');"></div>
-            <div class="conteudo">
-                <h2>São Paulo</h2>
-                <p>Resumo breve do artigo científico. Clique para ler mais!</p>
+        <a href="sao-paulo.html" class="conteiner-link">
+            <div class="conteiner">
+                <div class="img" style="background-image: url('imagens/saopaulo.webp');"></div>
+                <div class="conteudo">
+                    <h2>São Paulo</h2>
+                    <p>História de São Paulo e sua Companhia de Tratamento de Água. Clique para ler mais!</p>
+                </div>
             </div>
-        </div>
-        <div class="conteiner" onclick="window.location.href='osasco.html';">
-            <div class="img" style="background-image: url('osasco.jpg');"></div>
-            <div class="conteudo">
-                <h2>Osasco</h2>
-                <p>Resumo breve do artigo científico. Clique para ler mais!</p>
+        </a>
+        <a href="osasco.html" class="conteiner-link">
+            <div class="conteiner">
+                <div class="img" style="background-image: url('imagens/osasco.jpg');"></div>
+                <div class="conteudo">
+                    <h2>Osasco</h2>
+                    <p>História de Osasco e suas Companhias de Tratamento de Água. Clique para ler mais!</p>
+                </div>
             </div>
-        </div>
+        </a>
     </main>
 
     <footer>

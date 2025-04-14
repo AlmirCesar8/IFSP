@@ -6,6 +6,7 @@ h3,
 p,
 ul,
 li,
+a,
 div {
     margin: 0;
     padding: 0;
@@ -53,6 +54,10 @@ header nav ul li {
 header nav ul li:hover {
     background-color: #003d5e;
 }
+header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
 
 main {
     padding: 2rem;
@@ -61,6 +66,10 @@ main {
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
 .conteiner {
     display: flex;
     flex-direction: column;
