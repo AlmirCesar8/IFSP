@@ -1,0 +1,207 @@
+/* Reset básico */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header nav {
+    justify-content: space-between;
+}
+
+header div {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+header nav ul li {
+    font-size: 1.15rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    display: block;
+    padding: 1%;
+}
+
+header nav ul li:hover {
+    background-color: #003d5e;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.conteiner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.img {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.img2 {
+    width: 100%;
+    height: 100%;
+    /* A imagem agora ocupa toda a altura da div */
+    background-size: cover;
+    /* Ajusta a imagem para cobrir toda a área */
+    background-position: center;
+    /* Centraliza a imagem */
+    border-radius: 8px;
+    /* Mantém o mesmo estilo arredondado */
+    margin-right: 2rem;
+}
+
+.conteudo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.texto {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    text-align: justify;
+}
+
+footer {
+    background-color: #0077b6;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.bibliografia {
+    font-size: 0.7rem;
+    text-align: justify;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    header div {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .conteiner {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+
+    .conteudo {
+        font-size: 1rem;
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    header div {
+        font-size: 1.2rem;
+    }
+
+    .texto {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsividade para telas grandes */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Agora exibe 2 artigos por linha */
+        gap: 2rem;
+    }
+
+    .conteiner {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .conteudo {
+        font-size: 1.4rem;
+    }
+
+    .img {
+        height: 250px;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
