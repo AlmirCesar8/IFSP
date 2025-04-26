@@ -148,13 +148,9 @@ footer {
         font-size: 1.5rem;
     }
 
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
     header nav ul li {
-        margin: 0.5rem 0;
+        margin: rem 0;
+        font-size: medium;
     }
 
     main {
@@ -171,10 +167,11 @@ footer {
     }
 
     .bibliografia {
-        font-size: 0.9rem;
-        margin: 1rem 0;
-        padding: 1rem;
-        text-align: justify;
+        font-size: 0.85rem; /* Reduz o tamanho da fonte */
+        margin-top: 0px; /* Ajusta as margens */
+        padding: 1rem; /* Ajusta o preenchimento */
+        text-align: justify; /* Mantém o texto justificado */
+        line-height: 1.5; /* Ajusta a altura da linha */
     }
 }
 
@@ -183,6 +180,10 @@ footer {
     header div {
         font-size: 1.2rem;
     }
+    header nav ul li {
+        font-size: small;
+    }
+
 
     .texto {
         font-size: 0.9rem;
@@ -193,10 +194,11 @@ footer {
     }
 
     .bibliografia {
-        font-size: 0.8rem;
-        margin: 0.5rem 0;
-        padding: 0.5rem;
-        text-align: justify;
+        font-size: 0.75rem; /* Fonte menor para telas pequenas */
+        margin: 0.5rem 0; /* Margens menores */
+        padding: 0.5rem; /* Preenchimento menor */
+        text-align: justify; /* Mantém o texto justificado */
+        line-height: 1.4; /* Ajusta a altura da linha */
     }
 }
 
@@ -229,9 +231,10 @@ footer {
     }
 
     .bibliografia {
-        font-size: 1rem;
-        margin: 1.5rem 0;
-        padding: 1.5rem;
-        text-align: justify;
+        font-size: 1rem; /* Fonte maior para telas grandes */
+        margin: 1.5rem 0; /* Margens maiores */
+        padding: 1.5rem; /* Preenchimento maior */
+        text-align: justify; /* Mantém o texto justificado */
+        line-height: 1.6; /* Ajusta a altura da linha */
     }
 }
