@@ -1,8 +1,9 @@
+from jogos_catalogados import catalogo_de_jogos
 # Class PlataformaDeJogos
 class PlataformaDeJogos:
     def __init__(self, nome_plataforma):
         self.nome_plataforma = nome_plataforma
-        self.catalogo_de_jogos = []
+        self.catalogo_de_jogos = catalogo_de_jogos
         self.jogadores_cadastrados = []
 
     def adicionar_jogo_catalogo(self, novo_jogo):
@@ -39,14 +40,14 @@ class PlataformaDeJogos:
             if jogo.titulo.lower() == titulo_jogo_desejado.lower():
                 verificacao_biblioteca = True
         
-        if jogador is not None and jogo is not False:
+        if jogador is not False and jogo is not None:
             if verificacao_biblioteca == False:
                 if jogador.debitar_saldo(jogo.preco) is not False:
                     jogador.adicionar_jogo_biblioteca(jogo)
-                    print("Compra realizada com sucesso")
+                    print("Compra realizada com sucesso.")
                 else:
-                    print("Sem saldo para compra")
+                    print("Sem saldo para compra. Adicione saldo à sua conta")
             else:
-                print("Você já tem este jogo. Tente comprar outro")
+                print("Você já tem este jogo. Tente comprar outro.")
         else:
-            print("Jogo/Jogador não encontrado. Tente outra vez")
+            print("Jogo/Jogador não encontrado. Tente outra vez.")
