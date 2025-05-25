@@ -31,4 +31,19 @@ class Jogador:
             return True
         else:
             return False
+        
+    def jogar(self, nome_do_jogo):
+        self.nome_do_jogo = nome_do_jogo
+        if not self.biblioteca_de_jogos:
+            print("Biblioteca de jogos vazia")
+            return
+        for jogo in self.biblioteca_de_jogos:
+            if jogo.titulo.lower() == nome_do_jogo.lower():
+                print(f"Jogando {jogo.titulo}...")
+                jogo.jogar()
+                return
+        print(f"Jogo {nome_do_jogo} não encontrado na biblioteca.")
+        return
+
+            
     

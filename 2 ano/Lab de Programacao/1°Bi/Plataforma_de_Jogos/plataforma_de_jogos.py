@@ -30,10 +30,8 @@ class PlataformaDeJogos:
             print()
 
     def realizar_compra(self, id_jogador_comprador, titulo_jogo_desejado):
-        self.id_jogador_comprador = id_jogador_comprador
-        self.titulo_jogo_desejado = titulo_jogo_desejado
-        jogador = self.buscar_jogador_por_id(self.id_jogador_comprador)
-        jogo = self.buscar_jogo_por_titulo(self.titulo_jogo_desejado)
+        jogador = self.buscar_jogador_por_id(id_jogador_comprador)
+        jogo = self.buscar_jogo_por_titulo(titulo_jogo_desejado)
         verificacao_biblioteca = False
 
         for jogo in jogador.biblioteca_de_jogos:
@@ -51,3 +49,29 @@ class PlataformaDeJogos:
                 print("Você já tem este jogo. Tente comprar outro.")
         else:
             print("Jogo/Jogador não encontrado. Tente outra vez.")
+            
+    def presentear_jogo(self, id_jogador_comprador, titulo_jogo_desejado, id_jogador_presenteado):
+        self.id_jogador_comprador = id_jogador_comprador
+        self.titulo_jogo_desejado = titulo_jogo_desejado
+        self.id_jogador_presenteado = id_jogador_presenteado
+        jogador_comprador = self.buscar_jogador_por_id(self.id_jogador_comprador)
+        jogador_presenteado = self.buscar_jogador_por_id(self.id_jogador_presenteado)
+        jogo = self.buscar_jogo_por_titulo(self.titulo_jogo_desejado)
+        verificacao_biblioteca = False
+        
+        for jogo in jogador_presenteado.biblioteca_de_jogos:
+            if jogo.titulo.lower() == titulo_jogo_desejado.lower():
+                verificacao_biblioteca = True
+        
+        if jogador_comprador is not False and jogador_presenteado is not False and jogo is not None:
+            if verificacao_biblioteca == False:
+                if jogador_comprador.debitar_saldo(jogo.preco) is not False:
+                    jogador_presenteado.adicionar_jogo_biblioteca(jogo)
+                    print("Jogo presenteado com sucesso.")
+                else:
+                    print("Sem saldo para presentear. Adicione saldo à sua conta")
+            else:
+                print(f"{jogador_presenteado.nickname} já tem este jogo. Tente presentear outro.")
+        else:
+            print("Jogo/Jogador não encontrado. Tente outra vez.")
+
