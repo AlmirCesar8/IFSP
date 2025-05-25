@@ -31,17 +31,17 @@ class PlataformaDeJogos:
 
     def realizar_compra(self, id_jogador_comprador, titulo_jogo_desejado):
         jogador = self.buscar_jogador_por_id(id_jogador_comprador)
-        jogo = self.buscar_jogo_por_titulo(titulo_jogo_desejado)
+        jogo_catalogo = self.buscar_jogo_por_titulo(titulo_jogo_desejado)
         verificacao_biblioteca = False
 
-        for jogo in jogador.biblioteca_de_jogos:
-            if jogo.titulo.lower() == titulo_jogo_desejado.lower():
-                verificacao_biblioteca = True
-        
-        if jogador is not False and jogo is not None:
-            if verificacao_biblioteca == False:
-                if jogador.debitar_saldo(jogo.preco) is not False:
-                    jogador.adicionar_jogo_biblioteca(jogo)
+        if jogador is not False and jogo_catalogo is not None:
+            for jogo_biblioteca in jogador.biblioteca_de_jogos:
+                if jogo_biblioteca.titulo.lower() == titulo_jogo_desejado.lower():
+                    verificacao_biblioteca = True
+
+            if not verificacao_biblioteca:
+                if jogador.debitar_saldo(jogo_catalogo.preco) is not False:
+                    jogador.adicionar_jogo_biblioteca(jogo_catalogo)
                     print("Compra realizada com sucesso.")
                 else:
                     print("Sem saldo para compra. Adicione saldo à sua conta")
