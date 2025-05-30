@@ -1,0 +1,175 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5; /* Fundo neutro claro */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Assegurar que não haja margens que atrapalhem o layout */
+    color: #333333; /* Texto primário cinza escuro */
+}
+
+header {
+    background-color: #37474F; /* Azul escuro/cinza */
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* Texto branco */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vh;
+}
+
+header nav ul li {
+    font-size: 1.15rem;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li:hover {
+    background-color: #546E7A; /* Cor azul acinzentada para hover */
+    border-radius: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Texto branco */
+}
+
+main {
+    flex-grow: 1; /* O main ocupa o espaço disponível para empurrar o footer para baixo */
+}
+
+.containerForca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60vh;
+    height: 60vh;
+    margin: auto;
+    padding: 2rem;
+    /* Sem cor de fundo conforme pedido */
+}
+
+.containerForca h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem; /* Espaçamento abaixo do título */
+    color: #37474F; /* Azul escuro/cinza para título */
+}
+
+.containerForca button {
+    border-radius: 20%;
+    background-color: #546E7A; /* Azul acinzentado */
+    color: white; /* Texto branco */
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(84, 110, 122, 0.5);
+}
+
+.containerForca button:hover {
+    background-color: #455A64; /* Azul cinza mais escuro */
+    box-shadow: 0 6px 12px rgba(69, 90, 100, 0.7);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #37474F; /* Azul escuro/cinza */
+    color: white; /* Texto branco */
+    font-weight: 600;
+    box-shadow: 0 -3px 5px rgba(0,0,0,0.1);
+}
+
+.resultado {
+    margin-top: 10rem;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco quase opaco */
+    border: 1px solid #546E7A; /* Borda azul acinzentada */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 1rem; /* Espaçamento interno */
+    width: 60vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 0 8px 20px rgba(84, 110, 122, 0.3);
+}
+
+.resultado img {
+    max-width: 100%; /* Imagem responsiva */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+}
+
+.resultado input {
+    padding: 0.5rem; /* Espaçamento interno */
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: calc(100% - 2rem); /* Largura do input */
+    margin-bottom: 1rem; /* Espaçamento abaixo do input */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline-color: #546E7A;
+}
+
+.resultado input:focus {
+    border-color: #546E7A;
+    box-shadow: 0 0 8px rgba(84, 110, 122, 0.5);
+}
+
+.btn-enviar {
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #546E7A; /* Azul acinzentado */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 0.5rem 1rem; /* Espaçamento interno do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(84, 110, 122, 0.5);
+}
+
+.btn-enviar:hover {
+    background-color: #455A64; /* Azul cinza mais escuro */
+    box-shadow: 0 6px 12px rgba(69, 90, 100, 0.7);
+}
+
