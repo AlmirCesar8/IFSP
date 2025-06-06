@@ -19,15 +19,49 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <img src = "#", alt = "O objetivo da torre de hanoi é passar os arcos para o proximo, mas na ordem inicial"></img> <!--Colocar imagem da Torre de Hanoi-->
-        <img src = "#", alt = "Teste seus conhecimentos e se desafie para vê seus conhecimentos"></img> <!--Colocar imagem do Quiz dinâmico-->
-        <img src = "#", alt = "Acerte a palavra e não erre para não matar o personagem"></img> <!--Colocar imagem do Jogo da Forca-->
-        <img src = "#", alt = "Pedra, papel e tesoura contra o Pc, acho que o pc ganha em..."></img> <!--Colocar imagem do Pedra, Papel, e Tesoura vs Computador-->
-        <img src = "#", alt = "Faça uma competição contra o computador e veja quem ganha nesta intensa batalha nos mares"></img> <!--Colocar imagem da Batalha Naval Simplificada (Jogador vs. Computador)-->
-        <img src = "#", alt = "Adivinhe o número gerado e veja o quão rápido você acerta"></img> <!--Colocar imagem de adivinha o número-->
-    </section>
-    
-    
+
+    <main>
+        <section class = "carrossel">
+            <button class="carrossel-btn prev">&#10094;</button>
+            <div class="carrossel-content" id="carrossel">
+                <div class="carrossel-item">
+                    <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Torre de Hanoi">
+                    <h2>Torre de Hanoi</h2>
+                    <a href="#" class="btn-jogar" target="_blank">Jogar</a>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Quiz Dinâmico">
+                    <h2>Quiz Dinâmico</h2>
+                    <a href="#" class="btn-jogar" target="_blank">Jogar</a>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jogo da Forca">
+                    <h2>Jogo da Forca</h2>
+                    <a href="forca.html" class="btn-jogar" target="_blank">Jogar</a>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pedra, Papel e Tesoura">
+                    <h2>Pedra, Papel e Tesoura</h2>
+                    <a href="#" class="btn-jogar" target="_blank">Jogar</a>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pedra, Papel e Tesoura">
+                    <h2>Adivinhe o Número</h2>
+                    <a href="adivinhenumero.html" class="btn-jogar" target="_blank">Jogar</a>
+                </div>
+                <div class="carrossel-item">
+                    <img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pedra, Papel e Tesoura">
+                    <h2>Batalha Naval</h2>
+                    <a href="#" class="btn-jogar" target="_blank">Jogar</a>
+                </div>
+            </div>
+            <button class="carrossel-btn next">&#10095;</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Plataforma de Jogos. Todos os direitos reservados.</p>
+    </footer>
+    <script src="carrossel.js"></script>
 </body>
 </html>
