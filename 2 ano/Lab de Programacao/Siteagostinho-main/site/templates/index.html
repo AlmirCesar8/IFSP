@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classe Pessoa</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>PORTAL DA SAÚDE</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/noticias">Noticias</a></li>
+        </ul>
+    </nav>
+
+  <div class="container">
+    <h2>Descubra seu IMC</h2>
+
+    <div class="output" id="nomeDisplay"></div>
+
+    <label for="anoAtual">Ano Atual:</label>
+    <input type="number" id="anoAtual" placeholder="Digite o ano atual" />
+
+    <button onclick="mostrarNome()">Mostrar Nome</button>
+    <button onclick="calcularIdade()">Calcular Idade</button>
+    <button onclick="mostrarIMC()">Mostrar IMC</button>
+
+    <div class="output" id="resultado"></div>
+  </div>
+
+
+  <footer>
+    <br>
+    <p></p>
+    © Copyright 2025 Curso de Desenvolvimento de JavaScript
+    <p></p>
+    <br>
+</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>APP DE NOTÍCIAS</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/contato">Contato</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/noticias">Notícias</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Filtrar notícias</h2>
+    <label><input type="checkbox" id="saude" onchange="filtrarNoticia()"> Saúde</label>
+    <label><input type="checkbox" id="bemEstar" onchange="filtrarNoticia()"> Bem-Estar</label>
+    <div class="output" id="resultado"></div>
+  </div>
+
+  <footer>
+    <p>&copy; Copyright 2025 Curso de Desenvolvimento de JavaScript</p>
+  </footer>
+  <script>
+    const noticias = {{ noticias|tojson }};
+  </script>
+</body>
+</html>
