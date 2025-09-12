@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Dicionário Histórico</title>
+    <style>
+        body {margin: 0; max-width: 800px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+        h1 {color: brown;}
+        nav button {margin: 5px; padding: 10px 15px; border: 1px solid #ccc;}
+    </style>
+</head>
+
+<body>
+    <h1>Mini-Dicionário de Figuras Históricas</h1>
+    <p>Selecione um nome para ler a biografia. Observe como a página não recarrega!</p>
+
+    <nav>
+        {% for id in personagens %}
+            <button class="seletor-personagem" data-id="{{ id }}"> {{ nomes[id]['nome'] }} </button>
+        {% endfor %}
+    </nav>
+
+    <hr>
+
+    <div id="container-biografia">
+        <h2>Selecione uma pessoa acima</h2>
+        <p></p>
+    </div>
+
+    <script src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+</body>
+
+</html>
