@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 20px;}
+        h1 {color: #333;}
+        nav button{margin: 5px; padding: 10px 15px; border: 1px solid #ccc; background-color: #f;}
+    </style>
+</head>
+<body>
+    <h1>Mini-Dicionario de Figuras Historicas</h1>
+    <p>Selecione um nome para ler a biografia. Observe como a pagina não recarrega!</p>
+    <nav>
+        {% for id in personagem %}
+            <button class="seletor-personagem" data-id="{{ id }}">{{ nomes[id]['nome'] }}</button>
+    </nav>
+</body>
+</html>
