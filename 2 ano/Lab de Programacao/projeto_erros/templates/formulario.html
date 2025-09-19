@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de Cadastro</h1>
+    <p>Tente enviar o formulario com dados invalidos para ver a validação do navegador em ação.</p>
+    {% with menssages = get_flashed_menssages(with_categories=true) %}
+
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash {{ category }}"> {{ message }} </div>
+            {% endfor %}
+        {% endif%}
+    {% endwith %}
+
+    <form action="/formulario" method="post" novalidate>
+        <div class="form_group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required minlength="3" placeholder=" ">
+        </div>
+        <div class="form_group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder=" ">
+        </div>
+        <div class="form_group">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required min="18" max="120" placeholder=" ">
+        </div>
+
+        <div class="form-group">
+            <label for="cep">CEP (formato 00000-000):</label>
+
+            <input type="text" id="cep" name="cep" required pattern="\d(5)-\d{3}" title="digite o cep no formato" placeholder=" ">
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
