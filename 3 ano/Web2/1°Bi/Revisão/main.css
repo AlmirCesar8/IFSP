@@ -1,0 +1,53 @@
+:root {
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+*{
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+body {
+    background: var(--bg);
+}
+
+ul {
+    font-family: helvetica;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnfontColor: var(--white);
+}
+.dark-theme {
+    --bg : var(--black);
+    --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnfontColor: var(--black);
+}
+.btn {
+    position: relative; /* Alterado de absolute para relative */
+    margin: 20px left; /* Centraliza o botão horizontalmente */
+    display: block; /* Garante que o botão seja exibido como um bloco */
+    width: 100px; /* Aumentado o tamanho do botão */
+    height: 50px; /* Adicionado altura ao botão */
+    border-radius: 50%; /* Mantém o botão arredondado */
+    border: none;
+    color: var(--btnfontColor);
+    background-color: var(--btnBg);
+}
+
+/* Ajuste para o foco no botão */
+.btn:focus {
+    outline-style: none;
+}
